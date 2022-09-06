@@ -1,11 +1,22 @@
-var name = prompt ("What is your name?");
+var area = document.getElementById('area');
 
-var lastName = prompt ("What is your last name?");
+function enter(){
+    var name = prompt("Enter name");
 
-console.log(name+ " " + lastName);
+    if(name === '' || name === null){
+        alert("OPS");
+        area.innerHTML = "Enter name"
+    }else{
+        area.innerHTML = "Hello" + name + " ";
 
-document.write("<h1>Welcome "+name+" "+lastName+"</h1>");
+        let btnExit = document.createElement("button");//create button 
+        btnExit.innerText = "Exit";//text nutton
+        btnExit.onclick = exit;//call function exit
+        area.appendChild(btnExit);//add button in div area
+    }
+}
 
-document.write("<img src='https://sujeitoprogramador.com/steve.png' alt='Foto'/>");
-
- 
+function exit(){
+    alert("bye");
+    area.innerHTML = "BYE";
+}

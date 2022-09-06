@@ -1,20 +1,12 @@
-var list = ['Afonso', 'Felipe', 'Rafaela', 420];//array or list
 
-console.log(list.indexOf('Afonso'));//position of element
-console.log(list.indexOf('Rafaela'));//position of element
+var x = 0;
 
-console.log(list);
-list[0]='Afonso Silva';
-console.log(list);
+while(x < 10){
+    document.write("X: "+x+"<br>");
+    x++;
+}
 
-list.push("Test add");//add element
-console.log(list);
 
-list.shift();//remove first element
-console.log(list);
-
-list.pop();//remove final element
-console.log(list);
-
-console.log(list.join(';'));//element listing with ''
-console.log(list.join(','));//element listing with ''
+for(a=0; a<5;a++){
+    document.write("<br> A: " +a);
+}

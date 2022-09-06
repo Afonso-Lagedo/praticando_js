@@ -20,3 +20,15 @@ function exit(){
     alert("bye");
     area.innerHTML = "BYE";
 }
+
+//####continue functions part2
+function avarage(n1, n2) { //use function in console!
+    var m=(n1+n2)/2;
+
+    if (m>=7){
+        console.log("Approved: " +m);
+    }else if(m<7){
+        console.log("Disapproved: " +m)
+    }
+
+}

@@ -1,17 +1,11 @@
-//object
+// template string
 
-let person = {
-    name: "Afonso",
-    job: "dev"
-};
+let name="Afonso";
+let lastName="Silva";
+let age="29";
 
-console.log(person);
-console.log(person.job);
+let msg = "Meu nome é "+ name +" "+lastName;
+let msg2 = `Meu nome é ${name} ${lastName}`;
 
-let users = [
-    {name:"Afonso Silva", job:"dev"},
-    {name:"Felipe", job:"dev"}
-]
-
-console.log(users);
-console.log(users[1]);
+console.log(msg);
+console.log(msg2);

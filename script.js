@@ -1,39 +1,30 @@
-var date = new Date(); //current date
+var mass;
+var height;
+var imc;
+var result;
 
-//element
-/*
-console.log(date);
-console.log(date.getHours());
-console.log(date.getMinutes());
-console.log(date.getSeconds());
-console.log(date.getMilliseconds());
-console.log(date.getDate());
-console.log(date.getMonth());//in js jan= 0
-console.log(date.getDay());
-console.log(date.getFullYear());
-*/
+function calc(event){
+    event.preventDefault();//for no refresh
 
-//transform
-/*
-var date2 = new Date("March 23, 2023");
-console.log(date2);
-console.log(Date.parse(date2));
-*/
+    mass = document.getElementById('mass').value;
+    height = document.getElementById('height').value;
 
-//format
-/*
-var date3 = new Date();
-console.log(date3.getDate()+"/"+(date3.getMonth()+1)+"/"+date3.getFullYear());
+    imc = mass / (height * height);
 
-//operation
-date3.setDate(date3.getDate()+5);
-console.log(date3);
+    result = document.getElementById('result');
 
-date3.setHours(date3.getHours()+7);
-console.log(date3);
-*/
+    if(imc < 17){
+        result.innerHTML='<br/> Very low, IMC: '+imc.toFixed(2);
+    }else if(imc>17 && imc <=18.49){
+        result.innerHTML='<br/> Low, IMC: '+imc.toFixed(2);
+    }else if(imc>18.5 && imc<24.99){
+        result.innerHTML='<br/> Normal, IMC: '+imc.toFixed(2);
+    }else if(imc>25 && imc<29.99){
+        result.innerHTML='<br/> Above, IMC: '+imc.toFixed(2);
+    }else if(imc>=30){
+        result.innerHTML='<br/>Far above, IMC: '+imc.toFixed(2);
+    }
 
-var date4 = new Date();
-var days =['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-
-console.log(days[date4.getDay()]);
+    document.getElementById('mass').value='';
+    document.getElementById('height').value='';
+}

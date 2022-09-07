@@ -1,18 +1,17 @@
-// setInterval: run function from time to time infinitely
+//object
 
-function action(){
-    document.write("Run SetInterval...</br>");
-}
+let person = {
+    name: "Afonso",
+    job: "dev"
+};
 
-//setInterval(action, 2000);//1000=1s
+console.log(person);
+console.log(person.job);
 
-//with anonymous function
-/*var EXEMPLO =*/
-/*setInterval(()=>{
-    document.write("Run SetInterval Anonymous...</br>");
-}, 500);
-*/
+let users = [
+    {name:"Afonso Silva", job:"dev"},
+    {name:"Felipe", job:"dev"}
+]
 
-// for stoped: in console: clearInterval(EXEMPLO)
-
-setTimeout(action,3000);//run the function after the break
+console.log(users);
+console.log(users[1]);

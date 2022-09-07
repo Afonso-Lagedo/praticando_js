@@ -1,11 +1,27 @@
-// template string
+//deconstruct object
+/*
+let person = {
+    name: "Afonso",
+    job: "dev"
+};
 
-let name="Afonso";
-let lastName="Silva";
-let age="29";
+const {name} = person;
 
-let msg = "Meu nome é "+ name +" "+lastName;
-let msg2 = `Meu nome é ${name} ${lastName}`;
+console.log(name);
 
-console.log(msg);
-console.log(msg2);
+const {name:namePerson} = person;
+console.log(namePerson);
+*/
+
+//deconstruct array
+
+let names = ["Afonso", "Felipe", "Rafaela"];
+
+let {0:test} = names;
+
+console.log(test);
+
+let [test2, test3] = names;
+
+console.log(test2);
+console.log(test3);

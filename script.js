@@ -1,27 +1,42 @@
-//deconstruct object
+//Spread Operator
+
+//Array
+let n1 = [1,2,3];
+
+let n2 = [n1, 4,5];
+
+//spread
+let n3 = [...n1,4,5]
+
 /*
-let person = {
-    name: "Afonso",
-    job: "dev"
-};
-
-const {name} = person;
-
-console.log(name);
-
-const {name:namePerson} = person;
-console.log(namePerson);
+console.log(n1);
+console.log(n2);
+console.log(n3);
 */
 
-//deconstruct array
+//Object
 
-let names = ["Afonso", "Felipe", "Rafaela"];
+let person = {
+    name:"Afonso",
+    age:29
+}
 
-let {0:test} = names;
+let newPerson = {
+    ...person,
+    status:"on"
+}
 
-console.log(test);
+//console.log(newPerson);
 
-let [test2, test3] = names;
+//Exemple
+function newUser(info){
+    let datas = {
+        ...info,
+        status:"on",
+        job:"dev"
+    }
 
-console.log(test2);
-console.log(test3);
+    console.log(datas);
+}
+
+newUser({name:"Afonso", age:29});

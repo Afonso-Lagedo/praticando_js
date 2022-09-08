@@ -1,25 +1,23 @@
-//Rest Operator
+//MAP
 
-//without
-function guests(names){
-    //console.log(names);
-}
+let list = ["Afonso", "Felipe", "Rafaela"];
 
-guests("Afonso", "Felipe", "Rafaela");
+list.map((item, index)=>{
+    console.log(`-${item} - ${index}`)
+})
 
-//with
-function guests2(...names){
-    //console.log(names);
-}
-guests2("Afonso", "Felipe", "Rafaela");
+//Reduce
 
-//Exemple
-function generator(...numbers){
-    console.log(numbers);
+let numbers = [5,2,3,1];
 
-    const numbersGenerator = Math.floor(Math.random() * numbers.length);
-    console.log(numbers[numbersGenerator]);
-}
+let total = numbers.reduce((accumulator, number, index, original)=>{
+    console.log(`${accumulator} - total`);
+    console.log(`${number} - value current`);
+    console.log(`${index} - index current`);
+    console.log(`${original} - original array`);
+    console.log("================");
 
-generator(1,4,5,15,19,55,90,34);
+    return accumulator += number;
+})
 
+console.log(`TOTAL REDUCE: ${total}`)

@@ -1,42 +1,25 @@
-//Spread Operator
+//Rest Operator
 
-//Array
-let n1 = [1,2,3];
-
-let n2 = [n1, 4,5];
-
-//spread
-let n3 = [...n1,4,5]
-
-/*
-console.log(n1);
-console.log(n2);
-console.log(n3);
-*/
-
-//Object
-
-let person = {
-    name:"Afonso",
-    age:29
+//without
+function guests(names){
+    //console.log(names);
 }
 
-let newPerson = {
-    ...person,
-    status:"on"
-}
+guests("Afonso", "Felipe", "Rafaela");
 
-//console.log(newPerson);
+//with
+function guests2(...names){
+    //console.log(names);
+}
+guests2("Afonso", "Felipe", "Rafaela");
 
 //Exemple
-function newUser(info){
-    let datas = {
-        ...info,
-        status:"on",
-        job:"dev"
-    }
+function generator(...numbers){
+    console.log(numbers);
 
-    console.log(datas);
+    const numbersGenerator = Math.floor(Math.random() * numbers.length);
+    console.log(numbers[numbersGenerator]);
 }
 
-newUser({name:"Afonso", age:29});
+generator(1,4,5,15,19,55,90,34);
+

@@ -1,23 +1,19 @@
-//MAP
+//find: returns only the first result
 
-let list = ["Afonso", "Felipe", "Rafaela"];
+let list = [5,3,"Afonso", 2,"Felipe"];
 
-list.map((item, index)=>{
-    console.log(`-${item} - ${index}`)
+let result = list.find((item)=>{
+    return item === "Afonso"
 })
 
-//Reduce
+//console.log(result);
 
-let numbers = [5,2,3,1];
 
-let total = numbers.reduce((accumulator, number, index, original)=>{
-    console.log(`${accumulator} - total`);
-    console.log(`${number} - value current`);
-    console.log(`${index} - index current`);
-    console.log(`${original} - original array`);
-    console.log("================");
+//filter return all
+let names = ["Afonso", "Rafaela", "Felipe", "Ana"];
 
-    return accumulator += number;
-})
+let result2 = names.filter((item)=>{
+    return item.length >=5
+});
 
-console.log(`TOTAL REDUCE: ${total}`)
+console.log(result2);
